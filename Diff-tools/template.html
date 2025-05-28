@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>YAML Diff Report</title>
+	<style>
+		.delete {
+			color: red;
+		}
+
+		.add {
+			color: green;
+		}
+
+		.modify {
+			color: orange;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>YAML Difference Report</h1>
+	<ul>
+		{{range .}}
+		<li class="{{.Type}}">
+			<strong>{{.Path}}</strong> (Line {{.Line}}):
+			{{if eq .Type "delete"}}Deleted: {{.OldValue}}
+			{{else if eq .Type "add"}}Added: {{.NewValue}}
+			{{else if eq .Type "modify"}}Modified: {{.OldValue}} → {{.NewValue}}
+			{{end}}
+		</li>
+		{{end}}
+	</ul>
+</body>
+
+</html>
