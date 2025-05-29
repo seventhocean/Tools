@@ -5,11 +5,6 @@ import (
 	"flag"
 	"fmt"
 	"os"
-	"path/filepath"
-	"strings"
-
-	"bytes"
-	"html/template"
 
 	"github.com/rivo/tview"
 	"gopkg.in/yaml.v3"
@@ -29,19 +24,56 @@ type Diff struct {
 	OldValue string
 	NewValue string
 	Line     int
+	Column   int
+	Parent   *YAMLNode
+	Children []*YAMLNode
 }
 
-var (
-	outputHTML  = flag.String("html", "", "Generate HTML report to specified file")
-	ignoreCase  = flag.Bool("ignore-case", false, "Ignore case differences")
-	verbose     = flag.Bool("v", false, "Verbose output")
-	showVersion = flag.Bool("version", false, "Show version information")
-)
+func loadYAML(path string) (*YAMLNode, error) {
+	content, err := os.ReadFile(path)
+	if err != nil {
+		return nil, err
+	}
 
-//go:embed template.html
-var htmlTemplate embed.FS
+	var root interface{}
+	dec := yaml.NewDecoder(
+		yaml.WithMarkDecoder(
+			yaml.WithMarkLocation(
+				yaml.WithMarkLineColumn(),
+			),
+		),
+	)
+	if err := dec.Decode(content, &root); err != nil {
+		return nil, err
+	}
 
-const version = "1.1.0"
+	return buildTree(root, nil, 1, 1), nil
+}
+
+func buildTree(node interface{}, parent *YAMLNode, line, column int) *YAMLNode {
+	current := &YAMLNode{
+		Value:  node,
+		Line:   line,
+		Column: column,
+		Parent: parent,
+	}
+
+	if parent != nil {
+		parent.Children = append(parent.Children, current)
+	}
+
+	if m, ok := node.(map[string]interface{}); ok {
+		for k, v := range m {
+			current.Children = append(current.Children, buildTree(v, current, line, column+2))
+		}
+	} else if arr, ok := node.([]interface{}); ok {
+		for i, v := range arr {
+			current.Children = append(current.Children, buildTree(v, current, line+i+1, column+2))
+		}
+	}
+
+	return current
+}
 
 func main() {
 	flag.Usage = func() {
