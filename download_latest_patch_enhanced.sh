@@ -126,7 +126,7 @@ if [ -f "$TARGET_FILE_PATH" ]; then
     if cp "$TARGET_FILE_PATH" "$IMAGE_LIST_TARGET_DIR/"; then
         log "成功复制 patch_image_tag_list.txt 到 $IMAGE_LIST_TARGET_DIR/"
         
-        # 可选：复制其他相关文件
+        # 复制其他相关文件
         #SOURCE_DIR="$DOWNLOAD_DIR/$FILENAME/6.6/6.6.9/$FILENAME"
         #if [ -f "$SOURCE_DIR/download_extra.sh" ]; then
         #    cp "$SOURCE_DIR/download_extra.sh" "$IMAGE_LIST_TARGET_DIR/"

@@ -1,0 +1,15 @@
+deepflow-agent_tag:v6.6.5602
+deepflow-server_tag:v6.6.5602
+manager_tag:v6.6.743
+df-web-qiankun-core_tag:v6.6.19024
+df-web-qiankun-core-saas_tag:v6.6.19024
+df-web-metrics-explore_tag:v6.6.18972
+querier-js_tag:v6.6.18868
+statistics_tag:v6.6.2326
+pcap_tag:v6.6.220
+deepflow-app_tag:v6.6.235
+alarm_tag:v6.6.793
+fauths_tag:v6.6.653
+warrant_tag:v6.6.98
+talker_tag:v6.6.3036
+report_tag:v6.6.308
