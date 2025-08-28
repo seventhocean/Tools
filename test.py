@@ -44,7 +44,7 @@ def run_build_task(task_id, current_version, target_version):
         subprocess.run(["zip", "-j", upgrade_package_name] + tar_files, check=True)
         
         # 移动升级包到指定位置
-        final_path = f"/home/auto_packing_no_delete/{upgrade_package_name}"
+        final_path = f"/tmp/{upgrade_package_name}"
         if os.path.exists(final_path):
             os.remove(final_path)
         os.rename(upgrade_package_name, final_path)
@@ -102,19 +102,15 @@ def build():
                     yield f"data: {json.dumps(status)}\n\n"
                 
                 # 如果任务完成，退出循环
-
                 if status.get("complete"):
                     if status.get("error"):
                         yield f"data: {json.dumps({'status': 'error', 'message': status['message']})}\n\n"
                     else:
-                        # 先定义字典
-                        response_data = {
+                        yield f"data: {json.dumps({
                             'status': 'complete', 
                             'download_url': status['download_url'],
                             'message': status['message']
-                        }
-                        # 再格式化字符串
-                        yield f"data: {json.dumps(response_data)}\n\n"
+                        })}\n\n"
                     break
             time.sleep(0.5)
         
