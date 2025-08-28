@@ -43,11 +43,12 @@ def run_build_task(task_id, current_version, target_version):
         upgrade_package_name = f"upgrade_package_{current_version}_to_{target_version}_{task_id}.zip"
         subprocess.run(["zip", "-j", upgrade_package_name] + tar_files, check=True)
         
-        # 移动升级包到指定位置
-        final_path = f"/home/auto_packing_no_delete/{upgrade_package_name}"
-        if os.path.exists(final_path):
-            os.remove(final_path)
-        os.rename(upgrade_package_name, final_path)
+        # 直接使用当前目录下的zip文件路径
+        final_path = os.path.join("/home/auto_packing_no_delete/", upgrade_package_name)
+        
+        # 检查文件是否创建成功
+        if not os.path.exists(final_path):
+            raise Exception(f"升级包文件创建失败: {final_path}")
         
         # 完成
         build_status[task_id] = {
@@ -102,7 +103,6 @@ def build():
                     yield f"data: {json.dumps(status)}\n\n"
                 
                 # 如果任务完成，退出循环
-
                 if status.get("complete"):
                     if status.get("error"):
                         yield f"data: {json.dumps({'status': 'error', 'message': status['message']})}\n\n"
