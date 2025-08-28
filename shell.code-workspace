@@ -1,11 +1,7 @@
 {
-	"folders": [
-		{
-			"path": "../shell"
-		},
-		{
-			"path": "."
-		}
-	],
-	"settings": {}
+    "folders": [
+        {
+            "path": "."
+        }
+    ]
 }
