@@ -1,1 +1,46 @@
-2
+[2025-08-28 17:54:46] ===== 开始执行OSS补丁同步脚本 =====
+[2025-08-28 17:54:46] [1;33m初始化目录完成：[0m
+[2025-08-28 17:54:46]   - 临时下载目录：/home/auto_packing_no_delete/tmp_oss_download
+[2025-08-28 17:54:46]   - 镜像列表目录：/home/auto_packing_no_delete/latest_image_list
+[2025-08-28 17:54:46]   - 日志目录：/home/auto_packing_no_delete/logs
+[2025-08-28 17:54:46] [1;32mossutil 检查通过[0m
+[2025-08-28 17:54:46] [1;33m开始从OSS获取最新补丁包列表：oss://df-patch-no-delete/patch/6.6/6.6.9/latest/[0m
+[2025-08-28 17:54:47] [1;32m第1次尝试成功，找到最新OSS文件：oss://df-patch-no-delete/patch/6.6/6.6.9/latest/66-20250827-00000-ALL.tar.gz[0m
+[2025-08-28 17:54:47] [1;33m已存在镜像列表文件，当前MD5：e012ca89e3e0099db2aa0348031c2f94[0m
+[2025-08-28 17:54:47] [1;33m开始下载OSS文件：oss://df-patch-no-delete/patch/6.6/6.6.9/latest/66-20250827-00000-ALL.tar.gz → /home/auto_packing_no_delete/tmp_oss_download/66-20250827-00000-ALL.tar.gz[0m
+Scanning... found:(0 objects), Copy... done:(0 files)Total 1 objects,1.566 GiB, Copy... done:(0 files), 0.000%Total 1 objects,1.566 GiB, Copy... done:(0 files), 0.748%Total 1 objects,1.566 GiB, Copy... done:(0 files), 1.122%Total 1 objects,1.566 GiB, Copy... done:(0 files), 3.741%, avg 29.790 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 6.734%, avg 42.925 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 9.353%, avg 49.721 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 10.850%, avg 49.401 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 12.720%, avg 50.705 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 14.965%, avg 53.045 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 16.835%, avg 53.727 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 19.454%, avg 56.454 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 21.699%, avg 57.736 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 25.814%, avg 63.421 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 28.059%, avg 64.020 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 30.304%, avg 64.540 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 32.549%, avg 65.000 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 35.916%, avg 67.514 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 38.160%, avg 67.752 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 40.405%, avg 67.966 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 43.772%, avg 69.957 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 46.765%, avg 71.187 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 49.758%, avg 72.304 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 52.003%, avg 72.287 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 54.248%, avg 72.264 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 56.492%, avg 72.252 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 59.111%, avg 72.697 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 61.356%, avg 72.629 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 63.601%, avg 72.598 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 65.845%, avg 72.548 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 68.090%, avg 72.524 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 71.083%, avg 73.276 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 73.328%, avg 73.212 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 75.572%, avg 73.172 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 78.191%, avg 73.487 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 80.810%, avg 73.780 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 83.429%, avg 74.057 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 85.300%, avg 73.676 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 88.293%, avg 74.258 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 92.034%, avg 75.426 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 95.027%, avg 75.937 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 97.646%, avg 76.112 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 98.504%, avg 74.956 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 98.504%, avg 73.215 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 98.504%, avg 71.554 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 98.504%, avg 69.963 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 98.504%, avg 68.445 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 98.504%, avg 66.991 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 98.504%, avg 65.596 MiB/sTotal 1 objects,1.566 GiB, Copy... done:(0 files), 99.626%, avg 64.991 MiB/s                                                                             Success: Total 1 object, size 1681664153 B, Download done:(1 files, 1681664153 B), avg 63.029 MiB/s
+
+25.449709(s) elapsed
+[2025-08-28 17:55:13] [1;32m第1次尝试成功，文件下载完成：/home/auto_packing_no_delete/tmp_oss_download/66-20250827-00000-ALL.tar.gz[0m
+[2025-08-28 17:55:13] [1;33m开始执行双层解压...[0m
+[2025-08-28 17:55:13] 第一步：解压外层文件：/home/auto_packing_no_delete/tmp_oss_download/66-20250827-00000-ALL.tar.gz
+[2025-08-28 17:55:42] [1;32m外层文件解压完成，生成目录：/home/auto_packing_no_delete/tmp_oss_download/66-20250827-00000-ALL[0m
+[2025-08-28 17:55:42] 第二步：解压内层文件：/home/auto_packing_no_delete/tmp_oss_download/66-20250827-00000-ALL/66-20250827-00000-ALL.tar.gz
+[2025-08-28 17:56:17] [1;32m内层文件解压完成[0m
+[2025-08-28 17:56:17] [1;33m找到目标镜像列表文件：/home/auto_packing_no_delete/tmp_oss_download/66-20250827-00000-ALL/6.6/6.6.9/66-20250827-00000-ALL/patch_image_tag_list.txt[0m
+[2025-08-28 17:56:17] [1;33m镜像列表文件无更新（MD5一致），跳过覆盖[0m
+[2025-08-28 17:56:17] [1;33m开始清理临时目录旧文件（保留最近3天）：/home/auto_packing_no_delete/tmp_oss_download[0m
+[2025-08-28 17:56:17] [1;32m临时目录清理完成[0m
+[2025-08-28 17:56:17] [1;32m===== OSS补丁同步脚本执行完成 =====
+[2025-08-28 17:58:57] ===== 开始执行OSS补丁同步脚本 =====
+[2025-08-28 17:58:57] [1;33m初始化目录完成：[0m
+[2025-08-28 17:58:57]   - 临时下载目录：/home/auto_packing_no_delete/tmp_oss_download
+[2025-08-28 17:58:57]   - 镜像列表目录：/home/auto_packing_no_delete/latest_image_list
+[2025-08-28 17:58:57]   - 日志目录：/home/auto_packing_no_delete/logs
+[2025-08-28 17:58:57] [1;32mossutil 检查通过[0m
+[2025-08-28 17:58:57] [1;33m开始从OSS获取最新补丁包列表：oss://df-patch-no-delete/patch/6.6/6.6.9/latest/[0m
+[2025-08-28 17:58:58] [1;32m第1次尝试成功，找到最新OSS文件：oss://df-patch-no-delete/patch/6.6/6.6.9/latest/66-20250827-00000-ALL.tar.gz[0m
+[2025-08-28 17:58:58] [1;33m已存在镜像列表文件，当前MD5：e012ca89e3e0099db2aa0348031c2f94[0m
+[2025-08-28 17:58:58] [1;33m文件已存在，跳过下载：/home/auto_packing_no_delete/tmp_oss_download/66-20250827-00000-ALL.tar.gz[0m
+[2025-08-28 17:58:58] [1;33m开始执行双层解压...[0m
+[2025-08-28 17:58:58] 第一步：解压外层文件：/home/auto_packing_no_delete/tmp_oss_download/66-20250827-00000-ALL.tar.gz
+[2025-08-28 17:59:29] [1;32m外层文件解压完成，生成目录：/home/auto_packing_no_delete/tmp_oss_download/66-20250827-00000-ALL[0m
+[2025-08-28 17:59:29] 第二步：解压内层文件：/home/auto_packing_no_delete/tmp_oss_download/66-20250827-00000-ALL/66-20250827-00000-ALL.tar.gz
+[2025-08-28 18:00:04] [1;32m内层文件解压完成[0m
+[2025-08-28 18:00:04] [1;33m找到目标镜像列表文件：/home/auto_packing_no_delete/tmp_oss_download/66-20250827-00000-ALL/6.6/6.6.9/66-20250827-00000-ALL/patch_image_tag_list.txt[0m
+[2025-08-28 18:00:04] [1;33m镜像列表文件无更新（MD5一致），跳过覆盖[0m
+[2025-08-28 18:00:04] [1;33m开始清理临时目录旧文件（保留最近3天）：/home/auto_packing_no_delete/tmp_oss_download[0m
+[2025-08-28 18:00:04] [1;32m临时目录清理完成[0m
+[2025-08-28 18:00:04] [1;32m===== OSS补丁同步脚本执行完成 =====
+[2025-08-28 18:00:04] [1;37m当前最新镜像列表路径：[0;36m/home/auto_packing_no_delete/latest_image_list/patch_image_tag_list.txt[0m
+[2025-08-28 18:00:04] [1;37m日志文件路径：[0;36m/home/auto_packing_no_delete/logs/oss_processor.log[0m

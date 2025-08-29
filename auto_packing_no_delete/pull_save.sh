@@ -9,8 +9,8 @@ RED='\033[0;31m'
 YELLOW='\033[1;33m'
 WHITE='\033[1;37m'
 CYAN='\033[0;36m'
-BOLD='\033[1m'      # 新增：终端文字加粗（用于强调标题/示例）
-NC='\033[0m'        # 恢复默认颜色（取消加粗/颜色
+BOLD='\033[1m'
+NC='\033[0m'        # 恢复默认
 
 # 项目基础目录（与app.py保持一致）
 BASE_DIR="/home/auto_packing_no_delete"
@@ -86,7 +86,7 @@ repo_login() {
     log "${GREEN}仓库登录成功${NC}"
 }
 
-##拉取并保存单个镜像（核心函数）
+##拉取并保存单个镜像
 pull_and_save_single() {
     local full_image_name="$1"
     

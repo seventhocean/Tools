@@ -1,0 +1,2 @@
+deepflow-agent_tag:v6.6.5602
+deepflow-app_tag:v6.6.235
